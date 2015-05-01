@@ -17,3 +17,11 @@ my_seq51 <- 1:length(my_seq5)
 my_seq52 <- seq(along.with = my_seq5)
 
 my_seq53 <- seq_along(my_seq5)
+
+## if you want to create a sequence of zeros you have rep() option 
+
+my_zeros <- rep(0, times = 50) 
+
+## we can use rep() function for replicate vectors like rep(c(0,1),times = 10)
+
+my_seq6 <- rep(c(0,1,2),each = 10) 
