@@ -31,3 +31,19 @@ h5write(my_matrix,"example.h5","A/a/1")
 my_matrix2 <- matrix(11:20,5,2)
 h5write(my_matirx2,"example.h5","A/a/2")
 
+## you can also send your file to root (/) by just creating new item like 
+
+df <- data.frame(1:5,c("a","b","c","d","e"),stringAsFactors = FALSE)
+h5write(df,"example.h5","df") ## so we put df file to root and it contains df data set. 
+
+## and we read data from hdf5 
+
+readdf <- h5read("example.h5","df")
+readAa1 <- h5read("example","A/a/1")
+
+## nice advantage of hdf5 file is to use index 
+
+h5write(c(6,7),"example.h5","df",index=list(1:3,1))
+
+## you can also try index with h5read to read certain rows and columns
+
